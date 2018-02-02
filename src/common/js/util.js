@@ -7,6 +7,7 @@ function padding(s, len) {
 };
 
 export default {
+    // 模糊查询姓名规则
     getQueryStringByName: function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);
@@ -19,7 +20,7 @@ export default {
     },
     formatDate: {
 
-
+        // 定义日期显示格式
         format: function (date, pattern) {
             pattern = pattern || DEFAULT_PATTERN;
             return pattern.replace(SIGN_REGEXP, function ($0) {
